@@ -8,13 +8,13 @@ function App() {
       email: "",
       password: "",
     }, onSubmit: (values) => {
-      console.log(values);
+      alert('Login Successful');
     }, validate: (values) => {
       let errors = {};
       if (!values.email) errors.email = "Field required";
       if (!values.password) errors.password = "Field required";
       if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-        errors.email = 'Invalid email address';
+        errors.email = 'Username should be an email';
       }
       return errors;
     }
